@@ -1,6 +1,7 @@
 {
   "name": "maplemono",
   "displayName": "maplemono",
+  "publisher" : "WoodEighteen",
   "description": "Maple Mono font pack - Free monospaced font with programming ligatures vscode extension",
   "version": "0.0.1",
   "engines": {
@@ -9,16 +10,36 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "icon": "assets/maplemono.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "maplemono.helloWorld",
-        "title": "Hello World"
+        "command": "maplemono.activate",
+        "title": "Activate Maple Mono Font pack"
+      },
+      {
+        "command": "maplemono.deactivate",
+        "title": "Deactivate Maple Mono Font"
       }
     ]
   },
+  "repository": {
+    "url": "https://github.com/rbgayoivoye09/maplemono-vscode-extension.git"
+  },
+  "homepage": "https://github.com/rbgayoivoye09/maplemono-vscode-extension.git",
+  "bugs": {
+    "url": "https://github.com/rbgayoivoye09/maplemono-vscode-extension.git/issues"
+  },
+  "keywords": [
+    "font",
+    "maplemono font",
+    "Extension for Maple Mono font pack",
+    "Professional fonts for programming"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
